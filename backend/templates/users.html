@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Products</title>
+</head>
+
+<body>
+
+    <h1>All products in the database</h1>
+    <a href="{{ url_for('index') }}">Main Menu</a>
+    <a href="{{ url_for('products') }}">List of Products Page</a>
+
+    {% if user_details %}
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        {% for user in user_details %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.Firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ '*' * user.password|length }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No users found.</p>
+    {% endif %}
+
+</body>
+
+</html>

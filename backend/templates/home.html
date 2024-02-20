@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1> You are succesfully logged in!</h1>
+    <h2> Welcome Partner! </h2>
+    <a href="{{url_for('index')}}"> Press to logout </a>
+    <!-- {% if user is defined %}
+    <h2> Welcome {{ user.Firstname }} </h2>
+    <a href="{{url_for('index')}}"> Press to logout </a>
+    {% else %}
+    <p>User not defined</p>
+    {% endif %}
+     -->
+</body>
+</html>

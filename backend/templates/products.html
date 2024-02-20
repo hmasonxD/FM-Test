@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Users</title>
+</head>
+
+<body>
+
+    <h1>All Products in the database</h1>
+
+    {% if product_details %}
+    <table>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>description</th>
+            <th>price</th>
+        </tr>
+        {% for product in product_details %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No users found.</p>
+    {% endif %}
+
+        <a href="{{ url_for('index') }}">Main Menu</a>
+        <a href="{{ url_for('users') }}">List of list of users</a>
+</body>
+
+</html>
