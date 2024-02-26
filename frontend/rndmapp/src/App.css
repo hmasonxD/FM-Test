@@ -1,0 +1,167 @@
+/* styles.css */
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color:#343a40;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  color: #343a40;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Profile component styles */
+#profile {
+  margin-top: 2rem;
+}
+
+#profile h2 {
+  color: #007bff;
+}
+
+/* ChangePassword component styles */
+#change-password {
+  margin-top: 2rem;
+}
+
+#change-password h2 {
+  color: #007bff;
+}
+
+#change-password div {
+  margin-bottom: 1rem;
+}
+
+#change-password label {
+  margin-right: 1rem;
+}
+
+#change-password button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#change-password button:hover {
+  background-color: #0056b3;
+}
+
+/* Login component styles */
+#login {
+  margin-top: 2rem;
+}
+
+#login h2 {
+  color: #007bff;
+}
+
+#login form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+#login label {
+  margin-bottom: 0.5rem;
+}
+
+#login input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+#login button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#login button:hover {
+  background-color: #0056b3;
+}
+
+#login button.switch {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Admin component styles */
+#admin {
+  margin-top: 2rem;
+}
+
+#admin h2 {
+  color: #007bff;
+}
+
+#admin table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+#admin th,
+#admin td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+#admin th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+#admin button {
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+#admin button:hover {
+  background-color: #c82333;
+}
+/* .dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+} */

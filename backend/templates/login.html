@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <title>Login Page</title>
 </head>
+
 <body>
     <h1>Login Page</h1>
 
+    <!-- Display flashed messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
     <form method="POST" action="">
-        {{ form.hidden_tag()}}
-        {{ form.username}}
-        {{ form.password}}
-        {{ form.submit}}
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+        <label for="username">Username:</label>
+        {{ form.username }}
+        <br>
+        <label for="password">Password:</label>
+        {{ form.password }}
+        <br>
+        {{ form.submit }}
     </form>
 
-    <a href="{{url_for('register')}}">Dont have an account? Sign up</a>
-    <a href="{{url_for('index')}}">Main Menu</a>
+    <a href="{{ url_for('register') }}">Don't have an account? Sign up</a>
+    <a href="{{ url_for('index') }}">Main Menu</a>
 </body>
+
 </html>
